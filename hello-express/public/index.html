@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Express Test</title>
+</head>
+<body>
+<p>テストです</p>
+<script>
+var req = new XMLHttpRequest();
+req.onload = function () {
+  var res = JSON.parse(req.response);
+  console.log(res);
+};
+req.open('GET', '/api/test');
+req.send();
+</script>
+</body>
+</html>
